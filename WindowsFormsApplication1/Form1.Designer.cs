@@ -110,10 +110,10 @@
             this.InvestigationLabel = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.AcademicsLabel = new System.Windows.Forms.Label();
-            this.Number = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.Diff_Box = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Numbers = new System.Windows.Forms.RichTextBox();
+            this.ResultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -150,7 +150,7 @@
             this.Dex_Box.Name = "Dex_Box";
             this.Dex_Box.Size = new System.Drawing.Size(100, 20);
             this.Dex_Box.TabIndex = 3;
-            this.Dex_Box.Text = "0-15";
+            this.Dex_Box.Text = "0";
             // 
             // Stam_Box
             // 
@@ -158,7 +158,8 @@
             this.Stam_Box.Name = "Stam_Box";
             this.Stam_Box.Size = new System.Drawing.Size(100, 20);
             this.Stam_Box.TabIndex = 4;
-            this.Stam_Box.Text = "0-15";
+            this.Stam_Box.Text = "0";
+            this.Stam_Box.TextChanged += new System.EventHandler(this.Stam_Box_TextChanged);
             // 
             // StrengthLabel
             // 
@@ -224,7 +225,7 @@
             this.Appear_Box.Name = "Appear_Box";
             this.Appear_Box.Size = new System.Drawing.Size(100, 20);
             this.Appear_Box.TabIndex = 10;
-            this.Appear_Box.Text = "0-15";
+            this.Appear_Box.Text = "0";
             // 
             // Man_box
             // 
@@ -232,7 +233,7 @@
             this.Man_box.Name = "Man_box";
             this.Man_box.Size = new System.Drawing.Size(100, 20);
             this.Man_box.TabIndex = 9;
-            this.Man_box.Text = "0-15";
+            this.Man_box.Text = "0";
             // 
             // Char_Box
             // 
@@ -240,7 +241,7 @@
             this.Char_Box.Name = "Char_Box";
             this.Char_Box.Size = new System.Drawing.Size(100, 20);
             this.Char_Box.TabIndex = 8;
-            this.Char_Box.Text = "0-15";
+            this.Char_Box.Text = "0";
             // 
             // WitsLabel
             // 
@@ -275,7 +276,7 @@
             this.Wits_box.Name = "Wits_box";
             this.Wits_box.Size = new System.Drawing.Size(100, 20);
             this.Wits_box.TabIndex = 16;
-            this.Wits_box.Text = "0-15";
+            this.Wits_box.Text = "0";
             // 
             // Intel_box
             // 
@@ -283,7 +284,7 @@
             this.Intel_box.Name = "Intel_box";
             this.Intel_box.Size = new System.Drawing.Size(100, 20);
             this.Intel_box.TabIndex = 15;
-            this.Intel_box.Text = "0-15";
+            this.Intel_box.Text = "0";
             // 
             // Per_Box
             // 
@@ -291,7 +292,7 @@
             this.Per_Box.Name = "Per_Box";
             this.Per_Box.Size = new System.Drawing.Size(100, 20);
             this.Per_Box.TabIndex = 14;
-            this.Per_Box.Text = "0-15";
+            this.Per_Box.Text = "0";
             // 
             // label1
             // 
@@ -393,7 +394,7 @@
             this.Alert_Box.Name = "Alert_Box";
             this.Alert_Box.Size = new System.Drawing.Size(100, 20);
             this.Alert_Box.TabIndex = 30;
-            this.Alert_Box.Text = "0-10";
+            this.Alert_Box.Text = "0";
             // 
             // Brawl_Box
             // 
@@ -401,7 +402,7 @@
             this.Brawl_Box.Name = "Brawl_Box";
             this.Brawl_Box.Size = new System.Drawing.Size(100, 20);
             this.Brawl_Box.TabIndex = 31;
-            this.Brawl_Box.Text = "0-10";
+            this.Brawl_Box.Text = "0";
             // 
             // Ath_Box
             // 
@@ -409,7 +410,7 @@
             this.Ath_Box.Name = "Ath_Box";
             this.Ath_Box.Size = new System.Drawing.Size(100, 20);
             this.Ath_Box.TabIndex = 32;
-            this.Ath_Box.Text = "0-10";
+            this.Ath_Box.Text = "0";
             // 
             // Dodge_Box
             // 
@@ -417,7 +418,7 @@
             this.Dodge_Box.Name = "Dodge_Box";
             this.Dodge_Box.Size = new System.Drawing.Size(100, 20);
             this.Dodge_Box.TabIndex = 33;
-            this.Dodge_Box.Text = "0-10";
+            this.Dodge_Box.Text = "0";
             // 
             // Emp_Box
             // 
@@ -425,7 +426,7 @@
             this.Emp_Box.Name = "Emp_Box";
             this.Emp_Box.Size = new System.Drawing.Size(100, 20);
             this.Emp_Box.TabIndex = 34;
-            this.Emp_Box.Text = "0-10";
+            this.Emp_Box.Text = "0";
             // 
             // Express_Box
             // 
@@ -433,7 +434,7 @@
             this.Express_Box.Name = "Express_Box";
             this.Express_Box.Size = new System.Drawing.Size(100, 20);
             this.Express_Box.TabIndex = 35;
-            this.Express_Box.Text = "0-10";
+            this.Express_Box.Text = "0";
             // 
             // Intim_Box
             // 
@@ -441,7 +442,7 @@
             this.Intim_Box.Name = "Intim_Box";
             this.Intim_Box.Size = new System.Drawing.Size(100, 20);
             this.Intim_Box.TabIndex = 36;
-            this.Intim_Box.Text = "0-10";
+            this.Intim_Box.Text = "0";
             // 
             // Lead_Box
             // 
@@ -449,7 +450,7 @@
             this.Lead_Box.Name = "Lead_Box";
             this.Lead_Box.Size = new System.Drawing.Size(100, 20);
             this.Lead_Box.TabIndex = 37;
-            this.Lead_Box.Text = "0-10";
+            this.Lead_Box.Text = "0";
             // 
             // Street_Box
             // 
@@ -457,7 +458,7 @@
             this.Street_Box.Name = "Street_Box";
             this.Street_Box.Size = new System.Drawing.Size(100, 20);
             this.Street_Box.TabIndex = 38;
-            this.Street_Box.Text = "0-10";
+            this.Street_Box.Text = "0";
             // 
             // Subt_Box
             // 
@@ -465,7 +466,7 @@
             this.Subt_Box.Name = "Subt_Box";
             this.Subt_Box.Size = new System.Drawing.Size(100, 20);
             this.Subt_Box.TabIndex = 40;
-            this.Subt_Box.Text = "0-10";
+            this.Subt_Box.Text = "0";
             // 
             // SubterfugeLabel
             // 
@@ -491,7 +492,7 @@
             this.Surv_Box.Name = "Surv_Box";
             this.Surv_Box.Size = new System.Drawing.Size(100, 20);
             this.Surv_Box.TabIndex = 60;
-            this.Surv_Box.Text = "0-10";
+            this.Surv_Box.Text = "0";
             // 
             // Stealth_Box
             // 
@@ -499,7 +500,7 @@
             this.Stealth_Box.Name = "Stealth_Box";
             this.Stealth_Box.Size = new System.Drawing.Size(100, 20);
             this.Stealth_Box.TabIndex = 59;
-            this.Stealth_Box.Text = "0-10";
+            this.Stealth_Box.Text = "0";
             // 
             // Sec_box
             // 
@@ -507,7 +508,7 @@
             this.Sec_box.Name = "Sec_box";
             this.Sec_box.Size = new System.Drawing.Size(100, 20);
             this.Sec_box.TabIndex = 58;
-            this.Sec_box.Text = "0-10";
+            this.Sec_box.Text = "0";
             // 
             // Perf_Box
             // 
@@ -515,7 +516,7 @@
             this.Perf_Box.Name = "Perf_Box";
             this.Perf_Box.Size = new System.Drawing.Size(100, 20);
             this.Perf_Box.TabIndex = 57;
-            this.Perf_Box.Text = "0-10";
+            this.Perf_Box.Text = "0";
             // 
             // Mel_Box
             // 
@@ -523,7 +524,7 @@
             this.Mel_Box.Name = "Mel_Box";
             this.Mel_Box.Size = new System.Drawing.Size(100, 20);
             this.Mel_Box.TabIndex = 56;
-            this.Mel_Box.Text = "0-10";
+            this.Mel_Box.Text = "0";
             // 
             // Fire_Box
             // 
@@ -531,7 +532,7 @@
             this.Fire_Box.Name = "Fire_Box";
             this.Fire_Box.Size = new System.Drawing.Size(100, 20);
             this.Fire_Box.TabIndex = 55;
-            this.Fire_Box.Text = "0-10";
+            this.Fire_Box.Text = "0";
             // 
             // Eti_Box
             // 
@@ -539,7 +540,7 @@
             this.Eti_Box.Name = "Eti_Box";
             this.Eti_Box.Size = new System.Drawing.Size(100, 20);
             this.Eti_Box.TabIndex = 54;
-            this.Eti_Box.Text = "0-10";
+            this.Eti_Box.Text = "0";
             // 
             // Crafts_box
             // 
@@ -547,7 +548,7 @@
             this.Crafts_box.Name = "Crafts_box";
             this.Crafts_box.Size = new System.Drawing.Size(100, 20);
             this.Crafts_box.TabIndex = 53;
-            this.Crafts_box.Text = "0-10";
+            this.Crafts_box.Text = "0";
             // 
             // Drive_Box
             // 
@@ -555,7 +556,7 @@
             this.Drive_Box.Name = "Drive_Box";
             this.Drive_Box.Size = new System.Drawing.Size(100, 20);
             this.Drive_Box.TabIndex = 52;
-            this.Drive_Box.Text = "0-10";
+            this.Drive_Box.Text = "0";
             // 
             // AK_Box
             // 
@@ -563,7 +564,7 @@
             this.AK_Box.Name = "AK_Box";
             this.AK_Box.Size = new System.Drawing.Size(100, 20);
             this.AK_Box.TabIndex = 51;
-            this.AK_Box.Text = "0-10";
+            this.AK_Box.Text = "0";
             // 
             // CraftsLabel
             // 
@@ -661,7 +662,7 @@
             this.Sci_Box.Name = "Sci_Box";
             this.Sci_Box.Size = new System.Drawing.Size(100, 20);
             this.Sci_Box.TabIndex = 80;
-            this.Sci_Box.Text = "0-10";
+            this.Sci_Box.Text = "0";
             // 
             // Poli_Box
             // 
@@ -669,7 +670,7 @@
             this.Poli_Box.Name = "Poli_Box";
             this.Poli_Box.Size = new System.Drawing.Size(100, 20);
             this.Poli_Box.TabIndex = 79;
-            this.Poli_Box.Text = "0-10";
+            this.Poli_Box.Text = "0";
             // 
             // Occ_Box
             // 
@@ -677,7 +678,7 @@
             this.Occ_Box.Name = "Occ_Box";
             this.Occ_Box.Size = new System.Drawing.Size(100, 20);
             this.Occ_Box.TabIndex = 78;
-            this.Occ_Box.Text = "0-10";
+            this.Occ_Box.Text = "0";
             // 
             // Med_Box
             // 
@@ -685,7 +686,7 @@
             this.Med_Box.Name = "Med_Box";
             this.Med_Box.Size = new System.Drawing.Size(100, 20);
             this.Med_Box.TabIndex = 77;
-            this.Med_Box.Text = "0-10";
+            this.Med_Box.Text = "0";
             // 
             // Ling_Box
             // 
@@ -693,7 +694,7 @@
             this.Ling_Box.Name = "Ling_Box";
             this.Ling_Box.Size = new System.Drawing.Size(100, 20);
             this.Ling_Box.TabIndex = 76;
-            this.Ling_Box.Text = "0-10";
+            this.Ling_Box.Text = "0";
             // 
             // Law_Box
             // 
@@ -701,7 +702,7 @@
             this.Law_Box.Name = "Law_Box";
             this.Law_Box.Size = new System.Drawing.Size(100, 20);
             this.Law_Box.TabIndex = 75;
-            this.Law_Box.Text = "0-10";
+            this.Law_Box.Text = "0";
             // 
             // Invest_Box
             // 
@@ -709,7 +710,7 @@
             this.Invest_Box.Name = "Invest_Box";
             this.Invest_Box.Size = new System.Drawing.Size(100, 20);
             this.Invest_Box.TabIndex = 74;
-            this.Invest_Box.Text = "0-10";
+            this.Invest_Box.Text = "0";
             // 
             // Com_Box
             // 
@@ -717,7 +718,7 @@
             this.Com_Box.Name = "Com_Box";
             this.Com_Box.Size = new System.Drawing.Size(100, 20);
             this.Com_Box.TabIndex = 73;
-            this.Com_Box.Text = "0-10";
+            this.Com_Box.Text = "0";
             // 
             // Fin_Box
             // 
@@ -725,7 +726,7 @@
             this.Fin_Box.Name = "Fin_Box";
             this.Fin_Box.Size = new System.Drawing.Size(100, 20);
             this.Fin_Box.TabIndex = 72;
-            this.Fin_Box.Text = "0-10";
+            this.Fin_Box.Text = "0";
             // 
             // Ac_Box
             // 
@@ -733,7 +734,7 @@
             this.Ac_Box.Name = "Ac_Box";
             this.Ac_Box.Size = new System.Drawing.Size(100, 20);
             this.Ac_Box.TabIndex = 71;
-            this.Ac_Box.Text = "0-10";
+            this.Ac_Box.Text = "0";
             // 
             // ComputerLabel
             // 
@@ -817,16 +818,6 @@
             this.AcademicsLabel.TabIndex = 62;
             this.AcademicsLabel.Text = "Academics";
             // 
-            // Number
-            // 
-            this.Number.AutoSize = true;
-            this.Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Number.Location = new System.Drawing.Point(759, 162);
-            this.Number.Name = "Number";
-            this.Number.Size = new System.Drawing.Size(24, 25);
-            this.Number.TabIndex = 82;
-            this.Number.Text = "0";
-            // 
             // Diff_Box
             // 
             this.Diff_Box.Location = new System.Drawing.Point(2, 43);
@@ -835,15 +826,22 @@
             this.Diff_Box.TabIndex = 83;
             this.Diff_Box.Text = "Difficulty";
             // 
-            // button2
+            // Numbers
             // 
-            this.button2.Location = new System.Drawing.Point(12, 316);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 84;
-            this.button2.Text = "Bite";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Numbers.Location = new System.Drawing.Point(676, 61);
+            this.Numbers.Name = "Numbers";
+            this.Numbers.Size = new System.Drawing.Size(222, 184);
+            this.Numbers.TabIndex = 84;
+            this.Numbers.Text = "";
+            // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Location = new System.Drawing.Point(676, 43);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(42, 13);
+            this.ResultLabel.TabIndex = 85;
+            this.ResultLabel.Text = "Results";
             // 
             // cWOD_Roller
             // 
@@ -851,9 +849,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(910, 703);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ResultLabel);
+            this.Controls.Add(this.Numbers);
             this.Controls.Add(this.Diff_Box);
-            this.Controls.Add(this.Number);
             this.Controls.Add(this.ScienceLabel);
             this.Controls.Add(this.Sci_Box);
             this.Controls.Add(this.Poli_Box);
@@ -1028,10 +1026,10 @@
         private System.Windows.Forms.Label InvestigationLabel;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label AcademicsLabel;
-        private System.Windows.Forms.Label Number;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.TextBox Diff_Box;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RichTextBox Numbers;
+        private System.Windows.Forms.Label ResultLabel;
     }
 }
 

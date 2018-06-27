@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
-{
+{4
     public partial class cWOD_Roller : Form
     {
         
@@ -2281,6 +2281,38 @@ namespace WindowsFormsApplication1
 
                 }
             }
+        }
+
+        private void ActionDistanceCalculator_Click(object sender, EventArgs e)
+        {
+            int Dex = Convert.ToInt32(Dex_Box.Text);
+            JogNumLabel.Text = Convert.ToString(Dex + 36);
+            RunNumLabel.Text = Convert.ToString(Dex + 60);
+        }
+
+        private void RunNumLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RunLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void JogNumLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void JogLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWOD_Roller", "WindowsFormsApplication1\CWOD_Roller.csproj", "{912BC00F-2E08-4371-B498-D87DE16D4CF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWOD_ROller2.0", "..\CWOD_Roller2.0\CWOD_ROller2.0.csproj", "{2F97326E-296F-4C55-8238-11C37A43A18E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{912BC00F-2E08-4371-B498-D87DE16D4CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{912BC00F-2E08-4371-B498-D87DE16D4CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{912BC00F-2E08-4371-B498-D87DE16D4CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F97326E-296F-4C55-8238-11C37A43A18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F97326E-296F-4C55-8238-11C37A43A18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F97326E-296F-4C55-8238-11C37A43A18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F97326E-296F-4C55-8238-11C37A43A18E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB3EF4EB-18B2-4B63-86A6-79FA2F9DE1F1}
 	EndGlobalSection
 EndGlobal

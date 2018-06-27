@@ -143,11 +143,24 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.BloodButt = new System.Windows.Forms.Button();
+            this.JogLabel = new System.Windows.Forms.Label();
+            this.JogNumLabel = new System.Windows.Forms.Label();
+            this.RunLabel = new System.Windows.Forms.Label();
+            this.RunNumLabel = new System.Windows.Forms.Label();
+            this.ActionDistanceCalculator = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(699, 264);
+            this.button1.Location = new System.Drawing.Point(706, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(57, 47);
             this.button1.TabIndex = 0;
@@ -327,7 +340,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Copperplate Gothic Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(307, 5);
+            this.label1.Location = new System.Drawing.Point(645, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(220, 38);
             this.label1.TabIndex = 20;
@@ -978,11 +991,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 365);
+            this.label8.Location = new System.Drawing.Point(8, 365);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 13);
+            this.label8.Size = new System.Drawing.Size(91, 13);
             this.label8.TabIndex = 99;
-            this.label8.Text = "Temp. WillPower";
+            this.label8.Text = "Current WillPower";
             // 
             // label9
             // 
@@ -1017,10 +1030,11 @@
             this.label11.Size = new System.Drawing.Size(74, 13);
             this.label11.TabIndex = 103;
             this.label11.Text = "Walk: 21 Feet";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(622, 264);
+            this.button2.Location = new System.Drawing.Point(629, 379);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(57, 47);
             this.button2.TabIndex = 104;
@@ -1030,7 +1044,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(773, 264);
+            this.button3.Location = new System.Drawing.Point(780, 379);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(57, 47);
             this.button3.TabIndex = 105;
@@ -1040,7 +1054,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(841, 264);
+            this.button4.Location = new System.Drawing.Point(848, 379);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(57, 47);
             this.button4.TabIndex = 106;
@@ -1050,7 +1064,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(622, 317);
+            this.button5.Location = new System.Drawing.Point(629, 432);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(57, 47);
             this.button5.TabIndex = 107;
@@ -1060,7 +1074,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(841, 317);
+            this.button6.Location = new System.Drawing.Point(848, 432);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(57, 47);
             this.button6.TabIndex = 110;
@@ -1070,7 +1084,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(773, 317);
+            this.button7.Location = new System.Drawing.Point(780, 432);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(57, 47);
             this.button7.TabIndex = 109;
@@ -1080,7 +1094,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(699, 317);
+            this.button8.Location = new System.Drawing.Point(706, 432);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(57, 47);
             this.button8.TabIndex = 108;
@@ -1090,7 +1104,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(773, 370);
+            this.button10.Location = new System.Drawing.Point(780, 485);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(57, 47);
             this.button10.TabIndex = 112;
@@ -1100,7 +1114,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(699, 370);
+            this.button11.Location = new System.Drawing.Point(706, 485);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(57, 47);
             this.button11.TabIndex = 111;
@@ -1110,7 +1124,7 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(622, 370);
+            this.button13.Location = new System.Drawing.Point(629, 485);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(57, 47);
             this.button13.TabIndex = 115;
@@ -1118,12 +1132,150 @@
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
+            // BloodButt
+            // 
+            this.BloodButt.BackColor = System.Drawing.Color.Red;
+            this.BloodButt.Font = new System.Drawing.Font("Copperplate Gothic Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BloodButt.ForeColor = System.Drawing.Color.Black;
+            this.BloodButt.Location = new System.Drawing.Point(100, 447);
+            this.BloodButt.Name = "BloodButt";
+            this.BloodButt.Size = new System.Drawing.Size(88, 55);
+            this.BloodButt.TabIndex = 116;
+            this.BloodButt.Text = "Spend Blood";
+            this.BloodButt.UseVisualStyleBackColor = false;
+            // 
+            // JogLabel
+            // 
+            this.JogLabel.AutoSize = true;
+            this.JogLabel.Location = new System.Drawing.Point(2, 560);
+            this.JogLabel.Name = "JogLabel";
+            this.JogLabel.Size = new System.Drawing.Size(27, 13);
+            this.JogLabel.TabIndex = 118;
+            this.JogLabel.Text = "Jog:";
+            this.JogLabel.Click += new System.EventHandler(this.JogLabel_Click);
+            // 
+            // JogNumLabel
+            // 
+            this.JogNumLabel.AutoSize = true;
+            this.JogNumLabel.Location = new System.Drawing.Point(35, 560);
+            this.JogNumLabel.Name = "JogNumLabel";
+            this.JogNumLabel.Size = new System.Drawing.Size(13, 13);
+            this.JogNumLabel.TabIndex = 119;
+            this.JogNumLabel.Text = "0";
+            this.JogNumLabel.Click += new System.EventHandler(this.JogNumLabel_Click);
+            // 
+            // RunLabel
+            // 
+            this.RunLabel.AutoSize = true;
+            this.RunLabel.Location = new System.Drawing.Point(2, 579);
+            this.RunLabel.Name = "RunLabel";
+            this.RunLabel.Size = new System.Drawing.Size(30, 13);
+            this.RunLabel.TabIndex = 120;
+            this.RunLabel.Text = "Run:";
+            this.RunLabel.Click += new System.EventHandler(this.RunLabel_Click);
+            // 
+            // RunNumLabel
+            // 
+            this.RunNumLabel.AutoSize = true;
+            this.RunNumLabel.Location = new System.Drawing.Point(35, 579);
+            this.RunNumLabel.Name = "RunNumLabel";
+            this.RunNumLabel.Size = new System.Drawing.Size(13, 13);
+            this.RunNumLabel.TabIndex = 121;
+            this.RunNumLabel.Text = "0";
+            this.RunNumLabel.Click += new System.EventHandler(this.RunNumLabel_Click);
+            // 
+            // ActionDistanceCalculator
+            // 
+            this.ActionDistanceCalculator.Location = new System.Drawing.Point(2, 610);
+            this.ActionDistanceCalculator.Name = "ActionDistanceCalculator";
+            this.ActionDistanceCalculator.Size = new System.Drawing.Size(75, 23);
+            this.ActionDistanceCalculator.TabIndex = 122;
+            this.ActionDistanceCalculator.Text = "Calculate";
+            this.ActionDistanceCalculator.UseVisualStyleBackColor = true;
+            this.ActionDistanceCalculator.Click += new System.EventHandler(this.ActionDistanceCalculator_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(629, 264);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 123;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(710, 264);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 124;
+            this.button12.Text = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(118, 144);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 125;
+            this.button14.Text = "button14";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(118, 181);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 126;
+            this.button15.Text = "button15";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(118, 221);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 127;
+            this.button16.Text = "button16";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(109, 377);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(75, 23);
+            this.button17.TabIndex = 129;
+            this.button17.Text = "button17";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(109, 299);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 23);
+            this.button18.TabIndex = 130;
+            this.button18.Text = "button18";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
             // cWOD_Roller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(910, 703);
+            this.Controls.Add(this.button18);
+            this.Controls.Add(this.button17);
+            this.Controls.Add(this.button16);
+            this.Controls.Add(this.button15);
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.ActionDistanceCalculator);
+            this.Controls.Add(this.RunNumLabel);
+            this.Controls.Add(this.RunLabel);
+            this.Controls.Add(this.JogNumLabel);
+            this.Controls.Add(this.JogLabel);
+            this.Controls.Add(this.BloodButt);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button11);
@@ -1362,6 +1514,19 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button BloodButt;
+        private System.Windows.Forms.Label JogLabel;
+        private System.Windows.Forms.Label JogNumLabel;
+        private System.Windows.Forms.Label RunLabel;
+        private System.Windows.Forms.Label RunNumLabel;
+        private System.Windows.Forms.Button ActionDistanceCalculator;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
     }
 }
 

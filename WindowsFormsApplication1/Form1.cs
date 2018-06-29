@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
-{4
+{
     public partial class cWOD_Roller : Form
     {
         

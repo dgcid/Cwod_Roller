@@ -1,6 +1,6 @@
-﻿namespace WraithRoller
+﻿namespace PureDragonRoller
 {
-    partial class WraithForm
+    partial class DragonForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.WelcomePage = new System.Windows.Forms.Label();
-            this.NewButton = new System.Windows.Forms.Button();
-            this.LoadButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NewPlayButt = new System.Windows.Forms.Button();
+            this.RetPlayButt = new System.Windows.Forms.Button();
             this.Wraithstart = new System.Windows.Forms.Panel();
             this.WraithCombat = new System.Windows.Forms.Panel();
             this.GainWillButt = new System.Windows.Forms.Button();
@@ -194,39 +194,38 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // WelcomePage
+            // label1
             // 
-            this.WelcomePage.AutoSize = true;
-            this.WelcomePage.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomePage.Location = new System.Drawing.Point(521, 9);
-            this.WelcomePage.Name = "WelcomePage";
-            this.WelcomePage.Size = new System.Drawing.Size(210, 24);
-            this.WelcomePage.TabIndex = 0;
-            this.WelcomePage.Text = "Welcome Wraith";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(571, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(248, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome Dragon";
             // 
-            // NewButton
+            // NewPlayButt
             // 
-            this.NewButton.Location = new System.Drawing.Point(405, 344);
-            this.NewButton.Name = "NewButton";
-            this.NewButton.Size = new System.Drawing.Size(75, 23);
-            this.NewButton.TabIndex = 1;
-            this.NewButton.Text = "New";
-            this.NewButton.UseVisualStyleBackColor = true;
-            this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
+            this.NewPlayButt.Location = new System.Drawing.Point(4, 9);
+            this.NewPlayButt.Name = "NewPlayButt";
+            this.NewPlayButt.Size = new System.Drawing.Size(478, 590);
+            this.NewPlayButt.TabIndex = 1;
+            this.NewPlayButt.Text = "New Player";
+            this.NewPlayButt.UseVisualStyleBackColor = true;
+            this.NewPlayButt.Click += new System.EventHandler(this.NewPlayButt_Click);
             // 
-            // LoadButton
+            // RetPlayButt
             // 
-            this.LoadButton.Location = new System.Drawing.Point(830, 344);
-            this.LoadButton.Name = "LoadButton";
-            this.LoadButton.Size = new System.Drawing.Size(75, 23);
-            this.LoadButton.TabIndex = 2;
-            this.LoadButton.Text = "Load";
-            this.LoadButton.UseVisualStyleBackColor = true;
-            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
+            this.RetPlayButt.Location = new System.Drawing.Point(918, 9);
+            this.RetPlayButt.Name = "RetPlayButt";
+            this.RetPlayButt.Size = new System.Drawing.Size(407, 590);
+            this.RetPlayButt.TabIndex = 2;
+            this.RetPlayButt.Text = "Returning Player";
+            this.RetPlayButt.UseVisualStyleBackColor = true;
+            this.RetPlayButt.Click += new System.EventHandler(this.RetPlayButt_Click);
             // 
             // Wraithstart
             // 
-            this.Wraithstart.AutoSize = true;
             this.Wraithstart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Wraithstart.Controls.Add(this.WraithCombat);
             this.Wraithstart.Controls.Add(this.WraithCombatbutt);
@@ -328,13 +327,12 @@
             this.Wraithstart.Location = new System.Drawing.Point(0, 0);
             this.Wraithstart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Wraithstart.Name = "Wraithstart";
-            this.Wraithstart.Size = new System.Drawing.Size(1355, 677);
-            this.Wraithstart.TabIndex = 16;
+            this.Wraithstart.Size = new System.Drawing.Size(1324, 598);
+            this.Wraithstart.TabIndex = 17;
             this.Wraithstart.Visible = false;
             // 
             // WraithCombat
             // 
-            this.WraithCombat.AutoSize = true;
             this.WraithCombat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.WraithCombat.Controls.Add(this.GainWillButt);
             this.WraithCombat.Controls.Add(this.GainPathButt);
@@ -396,11 +394,10 @@
             this.WraithCombat.Controls.Add(this.WraCurPathL);
             this.WraithCombat.Controls.Add(this.WraCurPathNum);
             this.WraithCombat.Controls.Add(this.WraCurPathButt);
-            this.WraithCombat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WraithCombat.Location = new System.Drawing.Point(0, 0);
+            this.WraithCombat.Location = new System.Drawing.Point(1192, 108);
             this.WraithCombat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.WraithCombat.Name = "WraithCombat";
-            this.WraithCombat.Size = new System.Drawing.Size(1355, 677);
+            this.WraithCombat.Size = new System.Drawing.Size(113, 166);
             this.WraithCombat.TabIndex = 161;
             this.WraithCombat.Visible = false;
             // 
@@ -413,7 +410,6 @@
             this.GainWillButt.TabIndex = 186;
             this.GainWillButt.Text = "Gain Willpower";
             this.GainWillButt.UseVisualStyleBackColor = true;
-            this.GainWillButt.Click += new System.EventHandler(this.GainWillButt_Click);
             // 
             // GainPathButt
             // 
@@ -424,7 +420,6 @@
             this.GainPathButt.TabIndex = 185;
             this.GainPathButt.Text = "Gain Pathos";
             this.GainPathButt.UseVisualStyleBackColor = true;
-            this.GainPathButt.Click += new System.EventHandler(this.GainPathButt_Click);
             // 
             // panel3
             // 
@@ -452,7 +447,6 @@
             this.GainCorpusbutt.TabIndex = 184;
             this.GainCorpusbutt.Text = "Gain Corpus";
             this.GainCorpusbutt.UseVisualStyleBackColor = true;
-            this.GainCorpusbutt.Click += new System.EventHandler(this.GainCorpusbutt_Click_1);
             // 
             // wraithSocButt
             // 
@@ -463,7 +457,6 @@
             this.wraithSocButt.TabIndex = 176;
             this.wraithSocButt.Text = "Social";
             this.wraithSocButt.UseVisualStyleBackColor = true;
-            this.wraithSocButt.Click += new System.EventHandler(this.wraithSocButt_Click_1);
             // 
             // wraSaveButt
             // 
@@ -474,7 +467,6 @@
             this.wraSaveButt.TabIndex = 175;
             this.wraSaveButt.Text = "Save";
             this.wraSaveButt.UseVisualStyleBackColor = true;
-            this.wraSaveButt.Click += new System.EventHandler(this.wraSaveButt_Click_1);
             // 
             // WraArmBox
             // 
@@ -505,7 +497,6 @@
             this.WraSpendWillbutt.TabIndex = 172;
             this.WraSpendWillbutt.Text = "Spend Willpower";
             this.WraSpendWillbutt.UseVisualStyleBackColor = true;
-            this.WraSpendWillbutt.Click += new System.EventHandler(this.WraSpendWillbutt_Click_1);
             // 
             // WraSpendCorpbutt
             // 
@@ -516,7 +507,6 @@
             this.WraSpendCorpbutt.TabIndex = 171;
             this.WraSpendCorpbutt.Text = "Lose Corpus";
             this.WraSpendCorpbutt.UseVisualStyleBackColor = true;
-            this.WraSpendCorpbutt.Click += new System.EventHandler(this.WraSpendCorpbutt_Click_1);
             // 
             // WraDiffBox
             // 
@@ -546,7 +536,6 @@
             this.WraRunButt.TabIndex = 168;
             this.WraRunButt.Text = "Run";
             this.WraRunButt.UseVisualStyleBackColor = true;
-            this.WraRunButt.Click += new System.EventHandler(this.WraRunButt_Click_1);
             // 
             // WraJogbutt
             // 
@@ -557,7 +546,6 @@
             this.WraJogbutt.TabIndex = 167;
             this.WraJogbutt.Text = "Jog";
             this.WraJogbutt.UseVisualStyleBackColor = true;
-            this.WraJogbutt.Click += new System.EventHandler(this.WraJogbutt_Click_1);
             // 
             // WraDamagebox
             // 
@@ -608,7 +596,6 @@
             this.button33.TabIndex = 162;
             this.button33.Text = "EndTurn";
             this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.button33_Click_1);
             // 
             // WraCalcButt
             // 
@@ -619,7 +606,6 @@
             this.WraCalcButt.TabIndex = 160;
             this.WraCalcButt.Text = "Calculate";
             this.WraCalcButt.UseVisualStyleBackColor = true;
-            this.WraCalcButt.Click += new System.EventHandler(this.WraCalcButt_Click_1);
             // 
             // WraRunNum
             // 
@@ -700,7 +686,6 @@
             this.WraDodgeRatebutt.TabIndex = 152;
             this.WraDodgeRatebutt.Text = "Dodge Rating";
             this.WraDodgeRatebutt.UseVisualStyleBackColor = true;
-            this.WraDodgeRatebutt.Click += new System.EventHandler(this.WraDodgeRatebutt_Click_1);
             // 
             // WraDodRateNum
             // 
@@ -733,7 +718,6 @@
             this.WraithLoadStats.TabIndex = 147;
             this.WraithLoadStats.Text = "Load Corp/Will/Pathos";
             this.WraithLoadStats.UseVisualStyleBackColor = true;
-            this.WraithLoadStats.Click += new System.EventHandler(this.WraithLoadStats_Click_1);
             // 
             // WraCurCorpNum
             // 
@@ -764,7 +748,6 @@
             this.WraInitButt.TabIndex = 143;
             this.WraInitButt.Text = "Initiative";
             this.WraInitButt.UseVisualStyleBackColor = true;
-            this.WraInitButt.Click += new System.EventHandler(this.WraInitButt_Click_1);
             // 
             // WraBackButt
             // 
@@ -777,7 +760,6 @@
             this.WraBackButt.TabIndex = 142;
             this.WraBackButt.Text = "Back";
             this.WraBackButt.UseVisualStyleBackColor = true;
-            this.WraBackButt.Click += new System.EventHandler(this.WraBackButt_Click_1);
             // 
             // WraSoakButt
             // 
@@ -788,7 +770,6 @@
             this.WraSoakButt.TabIndex = 141;
             this.WraSoakButt.Text = "Soak";
             this.WraSoakButt.UseVisualStyleBackColor = true;
-            this.WraSoakButt.Click += new System.EventHandler(this.WraSoakButt_Click_1);
             // 
             // WraDodgeButt
             // 
@@ -799,7 +780,6 @@
             this.WraDodgeButt.TabIndex = 140;
             this.WraDodgeButt.Text = "Dodge";
             this.WraDodgeButt.UseVisualStyleBackColor = true;
-            this.WraDodgeButt.Click += new System.EventHandler(this.WraDodgeButt_Click_1);
             // 
             // WraParrybutt
             // 
@@ -810,7 +790,6 @@
             this.WraParrybutt.TabIndex = 139;
             this.WraParrybutt.Text = "Parry";
             this.WraParrybutt.UseVisualStyleBackColor = true;
-            this.WraParrybutt.Click += new System.EventHandler(this.WraParrybutt_Click_1);
             // 
             // WraBlockButt
             // 
@@ -821,7 +800,6 @@
             this.WraBlockButt.TabIndex = 138;
             this.WraBlockButt.Text = "Block";
             this.WraBlockButt.UseVisualStyleBackColor = true;
-            this.WraBlockButt.Click += new System.EventHandler(this.WraBlockButt_Click_1);
             // 
             // label43
             // 
@@ -852,7 +830,6 @@
             this.WraDualWepButt.TabIndex = 135;
             this.WraDualWepButt.Text = "Dual Weapons";
             this.WraDualWepButt.UseVisualStyleBackColor = true;
-            this.WraDualWepButt.Click += new System.EventHandler(this.WraDualWepButt_Click_1);
             // 
             // Wra3rbbutt
             // 
@@ -863,7 +840,6 @@
             this.Wra3rbbutt.TabIndex = 134;
             this.Wra3rbbutt.Text = "3-Round Burst";
             this.Wra3rbbutt.UseVisualStyleBackColor = true;
-            this.Wra3rbbutt.Click += new System.EventHandler(this.Wra3rbbutt_Click_1);
             // 
             // WraCovButt
             // 
@@ -874,7 +850,6 @@
             this.WraCovButt.TabIndex = 133;
             this.WraCovButt.Text = "Cover";
             this.WraCovButt.UseVisualStyleBackColor = true;
-            this.WraCovButt.Click += new System.EventHandler(this.WraCovButt_Click_1);
             // 
             // WraAutoFButt
             // 
@@ -885,7 +860,6 @@
             this.WraAutoFButt.TabIndex = 132;
             this.WraAutoFButt.Text = "AutoFire";
             this.WraAutoFButt.UseVisualStyleBackColor = true;
-            this.WraAutoFButt.Click += new System.EventHandler(this.WraAutoFButt_Click_1);
             // 
             // WraAimButt
             // 
@@ -896,7 +870,6 @@
             this.WraAimButt.TabIndex = 131;
             this.WraAimButt.Text = "Aim";
             this.WraAimButt.UseVisualStyleBackColor = true;
-            this.WraAimButt.Click += new System.EventHandler(this.WraAimButt_Click_1);
             // 
             // WraUsePowButt
             // 
@@ -907,7 +880,6 @@
             this.WraUsePowButt.TabIndex = 130;
             this.WraUsePowButt.Text = "Use Power";
             this.WraUsePowButt.UseVisualStyleBackColor = true;
-            this.WraUsePowButt.Click += new System.EventHandler(this.WraUsePowButt_Click_1);
             // 
             // WraCurWillL
             // 
@@ -948,7 +920,6 @@
             this.WraLeapingRake.TabIndex = 126;
             this.WraLeapingRake.Text = "Leaping Rake";
             this.WraLeapingRake.UseVisualStyleBackColor = true;
-            this.WraLeapingRake.Click += new System.EventHandler(this.WraLeapingRake_Click_1);
             // 
             // WraKickButt
             // 
@@ -959,7 +930,6 @@
             this.WraKickButt.TabIndex = 123;
             this.WraKickButt.Text = "Kick";
             this.WraKickButt.UseVisualStyleBackColor = true;
-            this.WraKickButt.Click += new System.EventHandler(this.WraKickButt_Click_1);
             // 
             // WraGrappleButt
             // 
@@ -970,7 +940,6 @@
             this.WraGrappleButt.TabIndex = 122;
             this.WraGrappleButt.Text = "Grapple";
             this.WraGrappleButt.UseVisualStyleBackColor = true;
-            this.WraGrappleButt.Click += new System.EventHandler(this.WraGrappleButt_Click_1);
             // 
             // WraBodSlambutt
             // 
@@ -981,7 +950,6 @@
             this.WraBodSlambutt.TabIndex = 121;
             this.WraBodSlambutt.Text = "Body Slam";
             this.WraBodSlambutt.UseVisualStyleBackColor = true;
-            this.WraBodSlambutt.Click += new System.EventHandler(this.WraBodSlambutt_Click_1);
             // 
             // WraFlankButt
             // 
@@ -992,7 +960,6 @@
             this.WraFlankButt.TabIndex = 120;
             this.WraFlankButt.Text = "Flank";
             this.WraFlankButt.UseVisualStyleBackColor = true;
-            this.WraFlankButt.Click += new System.EventHandler(this.WraFlankButt_Click_1);
             // 
             // WraPunchbutt
             // 
@@ -1003,7 +970,6 @@
             this.WraPunchbutt.TabIndex = 117;
             this.WraPunchbutt.Text = "Punch";
             this.WraPunchbutt.UseVisualStyleBackColor = true;
-            this.WraPunchbutt.Click += new System.EventHandler(this.WraPunchbutt_Click_1);
             // 
             // WraithCombatL
             // 
@@ -1045,7 +1011,6 @@
             this.WraCurPathButt.TabIndex = 180;
             this.WraCurPathButt.Text = "Spend Pathos";
             this.WraCurPathButt.UseVisualStyleBackColor = true;
-            this.WraCurPathButt.Click += new System.EventHandler(this.WraCurPathButt_Click_1);
             // 
             // WraithCombatbutt
             // 
@@ -1057,7 +1022,6 @@
             this.WraithCombatbutt.TabIndex = 160;
             this.WraithCombatbutt.Text = "Combat";
             this.WraithCombatbutt.UseVisualStyleBackColor = true;
-            this.WraithCombatbutt.Click += new System.EventHandler(this.WraithCombatbutt_Click_1);
             // 
             // WraStartOver
             // 
@@ -1068,7 +1032,6 @@
             this.WraStartOver.TabIndex = 159;
             this.WraStartOver.Text = "StartOver";
             this.WraStartOver.UseVisualStyleBackColor = true;
-            this.WraStartOver.Click += new System.EventHandler(this.WraStartOver_Click_1);
             // 
             // WraithPathos
             // 
@@ -1944,23 +1907,20 @@
             this.label105.Location = new System.Drawing.Point(648, 9);
             this.label105.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(170, 41);
+            this.label105.Size = new System.Drawing.Size(293, 41);
             this.label105.TabIndex = 0;
-            this.label105.Text = "Wraith";
+            this.label105.Text = "Pure Dragon";
             // 
-            // WraithForm
+            // DragonForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoScroll = true;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1355, 677);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1324, 598);
             this.Controls.Add(this.Wraithstart);
-            this.Controls.Add(this.LoadButton);
-            this.Controls.Add(this.NewButton);
-            this.Controls.Add(this.WelcomePage);
-            this.Name = "WraithForm";
+            this.Controls.Add(this.RetPlayButt);
+            this.Controls.Add(this.NewPlayButt);
+            this.Controls.Add(this.label1);
+            this.Name = "DragonForm";
             this.Text = "Form1";
             this.Wraithstart.ResumeLayout(false);
             this.Wraithstart.PerformLayout();
@@ -1975,14 +1935,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label WelcomePage;
-        private System.Windows.Forms.Button NewButton;
-        private System.Windows.Forms.Button LoadButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button NewPlayButt;
+        private System.Windows.Forms.Button RetPlayButt;
         private System.Windows.Forms.Panel Wraithstart;
         private System.Windows.Forms.Panel WraithCombat;
-        private System.Windows.Forms.Button GainCorpusbutt;
+        private System.Windows.Forms.Button GainWillButt;
+        private System.Windows.Forms.Button GainPathButt;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button GainCorpusbutt;
         private System.Windows.Forms.Button wraithSocButt;
         private System.Windows.Forms.Button wraSaveButt;
         private System.Windows.Forms.TextBox WraArmBox;
@@ -2134,8 +2096,6 @@
         private System.Windows.Forms.Label WraithLife;
         private System.Windows.Forms.Label WraithName;
         private System.Windows.Forms.Label label105;
-        private System.Windows.Forms.Button GainWillButt;
-        private System.Windows.Forms.Button GainPathButt;
     }
 }
 

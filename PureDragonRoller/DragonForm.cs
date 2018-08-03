@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace PureDragonRoller
 {
-    public partial class Form1 : Form
+    public partial class DragonForm : Form
     {
-        public Form1()
+        public DragonForm()
         {
             InitializeComponent();
+        }
+
+        private void NewPlayButt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RetPlayButt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

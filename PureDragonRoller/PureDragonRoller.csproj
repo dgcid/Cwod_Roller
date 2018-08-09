@@ -51,6 +51,7 @@
     <Compile Include="DragonForm.Designer.cs">
       <DependentUpon>DragonForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Information.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DragonForm.resx">

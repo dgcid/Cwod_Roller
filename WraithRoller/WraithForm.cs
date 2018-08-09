@@ -25,22 +25,28 @@ namespace WraithRoller
             xs = new XmlSerializer(typeof(List<Information>));
         }
 
+
         private void NewButton_Click(object sender, EventArgs e)
         {
             Wraithstart.Visible = true;
         }
 
+
         private void LoadButton_Click(object sender, EventArgs e)
         {
-            if (File.Exists("...\\Saves\\Wraith.Xml"))  //Wraith
+            Wraithstart.Visible = true;
+            openFileDialog1.InitialDirectory = @"I:\Projects\Cwod_Roller\WraithRoller\bin\Debug\Save";
+            openFileDialog1.Filter = "Xml Files (*.xml)|*.xml";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                // Load Wraith Boxes
-                Wraithstart.Visible = true;
+                
+                Information I = new Information();
+                XmlLoad<Information> loadinfo = new XmlLoad<Information>();
 
-                XmlSerializer xs = new XmlSerializer(typeof(Information));
-                FileStream fs = new FileStream("...\\Saves\\Wraith.Xml", FileMode.Open, FileAccess.Read, FileShare.Read);
-                Information I = (Information)xs.Deserialize(fs);
-
+                I = loadinfo.LoadData(openFileDialog1.FileName);
                 WraStrBox.Text = Convert.ToString(I.Wrastr);
                 WraDexBox.Text = Convert.ToString(I.Wradex);
                 wraStamBox.Text = Convert.ToString(I.Wrastam);
@@ -80,17 +86,91 @@ namespace WraithRoller
                 WraOccBox.Text = Convert.ToString(I.wraocc);
                 WraPolibox.Text = Convert.ToString(I.wrapoli);
                 WraScibox.Text = Convert.ToString(I.wrasci);
-                WraithPathos.Text = Convert.ToString(I.wrapathos);
+                WraPathosBox.Text = Convert.ToString(I.wrapathos);
                 WraCurPathNum.Text = Convert.ToString(I.wracurpathos);
-                WraithCorpus.Text = Convert.ToString(I.corpus);
+                WraithCorpusBox.Text = Convert.ToString(I.corpus);
                 WraCurCorpNum.Text = Convert.ToString(I.wracurcorp);
                 WraMWillBox.Text = Convert.ToString(I.wraMaxWill);
                 WraCurWillNum.Text = Convert.ToString(I.wraWill);
                 WraithNameBox.Text = Convert.ToString(I.wraName);
                 WraithLifeBox.Text = Convert.ToString(I.wraLife);
                 WraithDeathBox.Text = Convert.ToString(I.wraDeath);
-                fs.Close();
             }
+            
+
+          
+        }
+
+        //Wraith Save
+        private void wraSaveButt_Click_1(object sender, EventArgs e)
+        {
+
+            saveFileDialog1.InitialDirectory = @"I:\Projects\Cwod_Roller\WraithRoller\bin\Debug\Save";
+            saveFileDialog1.Filter = "Xml Files (*.xml)|*.xml";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Information i = new Information();
+
+
+                //Save Attributes
+
+                i.Wrastr = int.Parse(WraStrBox.Text);
+                i.Wradex = int.Parse(WraDexBox.Text);
+                i.Wrastam = int.Parse(wraStamBox.Text);
+                i.Wrachar = int.Parse(WraCharBox.Text);
+                i.wraman = int.Parse(WraManiBox.Text);
+                i.wraapp = int.Parse(WraAppBox.Text);
+                i.wraintel = int.Parse(WraIntBox.Text);
+                i.wraperc = int.Parse(WraPercBox.Text);
+                i.wrawits = int.Parse(WraWitsbox.Text);
+
+                i.wraalert = int.Parse(WraAlertBox.Text);
+                i.wraath = int.Parse(WraAthBox.Text);
+                i.wrabra = int.Parse(WraBraBox.Text);
+                i.wradod = int.Parse(WraDodBox.Text);
+                i.wraemp = int.Parse(WraEmpBox.Text);
+                i.wraexp = int.Parse(WraExpBox.Text);
+                i.wrainti = int.Parse(WraIntimBox.Text);
+                i.wralead = int.Parse(WraLeadBox.Text);
+                i.wrastreet = int.Parse(WraStreetBox.Text);
+                i.wrasubt = int.Parse(WraSubbox.Text);
+                i.wracraft = int.Parse(WraCraBox.Text);
+                i.wradrive = int.Parse(WraDrvBox.Text);
+                i.wraeti = int.Parse(WraEtiBox.Text);
+                i.wrafa = int.Parse(WraFABox.Text);
+                i.wramel = int.Parse(WraMelBox.Text);
+                i.wraperf = int.Parse(WraPerfBox.Text);
+                i.wrasec = int.Parse(WraSecBox.Text);
+                i.wrasteal = int.Parse(WraStealbox.Text);
+                i.wraacad = int.Parse(WraAcadBox.Text);
+                i.wracomp = int.Parse(WraCompBox.Text);
+                i.wraenig = int.Parse(WraEngBox.Text);
+                i.wrainvest = int.Parse(WraInvestBox.Text);
+                i.wralaw = int.Parse(WraLawbox.Text);
+                i.wraling = int.Parse(WraLingbox.Text);
+                i.wramed = int.Parse(WraMedBox.Text);
+                i.wraocc = int.Parse(WraOccBox.Text);
+                i.wrapoli = int.Parse(WraPolibox.Text);
+                i.wrasci = int.Parse(WraScibox.Text);
+                i.wrapathos = int.Parse(WraPathosBox.Text);
+                i.wracurpathos = int.Parse(WraCurPathNum.Text);
+                i.corpus = int.Parse(WraithCorpusBox.Text);
+                i.wracurcorp = int.Parse(WraCurCorpNum.Text);
+                i.wraName = Convert.ToString(WraithNameBox.Text);
+                i.wraLife = Convert.ToString(WraithLifeBox.Text);
+                i.wraDeath = Convert.ToString(WraithDeathBox.Text);
+                i.wraMaxWill = int.Parse(WraMWillBox.Text);
+                i.wraWill = int.Parse(WraCurWillNum.Text);
+                XmlSave.SaveData(i, saveFileDialog1.FileName);
+                WraithNumbers.Text = Convert.ToString("Save Successful");
+
+
+            }
+
         }
 
         //////////////////
@@ -338,12 +418,12 @@ namespace WraithRoller
             WraCurPathNum.Text = Convert.ToString(pathos - 1);
         }
 
-
-        private void GainPathButt_Click(object sender, EventArgs e)
+        private void GainPathButt_Click_1(object sender, EventArgs e)
         {
             var pathos = Convert.ToInt32(WraCurPathNum.Text);
             WraCurPathNum.Text = Convert.ToString(pathos + 1);
         }
+
 
         //Use Will
         private void WraSpendWillbutt_Click_1(object sender, EventArgs e)
@@ -352,12 +432,14 @@ namespace WraithRoller
             WraCurWillNum.Text = Convert.ToString(Will - 1);
         }
 
-        private void GainWillButt_Click(object sender, EventArgs e)
+
+        private void GainWillButt_Click_1(object sender, EventArgs e)
         {
             var Will = Convert.ToInt32(WraCurWillNum.Text);
             WraCurWillNum.Text = Convert.ToString(Will + 1);
         }
 
+       
 
         ////Close Combat////
 
@@ -2312,65 +2394,7 @@ namespace WraithRoller
             }
         }
 
-        //Wraith Save
-        private void wraSaveButt_Click_1(object sender, EventArgs e)
-        {
-            FileStream fs = new FileStream("...\\Saves\\Wraith.Xml", FileMode.Create, FileAccess.Write);
-            Information i = new Information();
-            //Save Attributes
-            i.Wrastr = int.Parse(WraStrBox.Text);
-            i.Wradex = int.Parse(WraDexBox.Text);
-            i.Wrastam = int.Parse(wraStamBox.Text);
-            i.Wrachar = int.Parse(WraCharBox.Text);
-            i.wraman = int.Parse(WraManiBox.Text);
-            i.wraapp = int.Parse(WraAppBox.Text);
-            i.wraintel = int.Parse(WraIntBox.Text);
-            i.wraperc = int.Parse(WraPercBox.Text);
-            i.wrawits = int.Parse(WraWitsbox.Text);
 
-            i.wraalert = int.Parse(WraAlertBox.Text);
-            i.wraath = int.Parse(WraAthBox.Text);
-            i.wrabra = int.Parse(WraBraBox.Text);
-            i.wradod = int.Parse(WraDodBox.Text);
-            i.wraemp = int.Parse(WraEmpBox.Text);
-            i.wraexp = int.Parse(WraExpBox.Text);
-            i.wrainti = int.Parse(WraIntimBox.Text);
-            i.wralead = int.Parse(WraLeadBox.Text);
-            i.wrastreet = int.Parse(WraStreetBox.Text);
-            i.wrasubt = int.Parse(WraSubbox.Text);
-            i.wracraft = int.Parse(WraCraBox.Text);
-            i.wradrive = int.Parse(WraDrvBox.Text);
-            i.wraeti = int.Parse(WraEtiBox.Text);
-            i.wrafa = int.Parse(WraFABox.Text);
-            i.wramel = int.Parse(WraMelBox.Text);
-            i.wraperf = int.Parse(WraPerfBox.Text);
-            i.wrasec = int.Parse(WraSecBox.Text);
-            i.wrasteal = int.Parse(WraStealbox.Text);
-            i.wraacad = int.Parse(WraAcadBox.Text);
-            i.wracomp = int.Parse(WraCompBox.Text);
-            i.wraenig = int.Parse(WraEngBox.Text);
-            i.wrainvest = int.Parse(WraInvestBox.Text);
-            i.wralaw = int.Parse(WraLawbox.Text);
-            i.wraling = int.Parse(WraLingbox.Text);
-            i.wramed = int.Parse(WraMedBox.Text);
-            i.wraocc = int.Parse(WraOccBox.Text);
-            i.wrapoli = int.Parse(WraPolibox.Text);
-            i.wrasci = int.Parse(WraScibox.Text);
-            i.wrapathos = int.Parse(WraPathosBox.Text);
-            i.wracurpathos = int.Parse(WraCurPathNum.Text);
-            i.corpus = int.Parse(WraithCorpusBox.Text);
-            i.wracurcorp = int.Parse(WraCurCorpNum.Text);
-            i.wraName = Convert.ToString(WraithNameBox.Text);
-            i.wraLife = Convert.ToString(WraithLifeBox.Text);
-            i.wraDeath = Convert.ToString(WraithDeathBox.Text);
-            i.wraMaxWill = int.Parse(WraMWillBox.Text);
-            i.wraWill = int.Parse(WraCurWillNum.Text);
-            ls.Add(i);
-            xs.Serialize(fs, ls);
-            WraithNumbers.Text = Convert.ToString("Save Successful");
-            fs.Close();
-
-        }
 
 
         private void wraithSocButt_Click_1(object sender, EventArgs e)
@@ -2420,6 +2444,11 @@ namespace WraithRoller
             WraithCombat.Visible = false;
         }
 
-      
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+       
     }
 }

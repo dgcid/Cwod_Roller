@@ -189,6 +189,8 @@
             this.WraithLife = new System.Windows.Forms.Label();
             this.WraithName = new System.Windows.Forms.Label();
             this.label105 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Wraithstart.SuspendLayout();
             this.WraithCombat.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -328,7 +330,7 @@
             this.Wraithstart.Location = new System.Drawing.Point(0, 0);
             this.Wraithstart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Wraithstart.Name = "Wraithstart";
-            this.Wraithstart.Size = new System.Drawing.Size(1355, 677);
+            this.Wraithstart.Size = new System.Drawing.Size(1904, 1041);
             this.Wraithstart.TabIndex = 16;
             this.Wraithstart.Visible = false;
             // 
@@ -400,7 +402,7 @@
             this.WraithCombat.Location = new System.Drawing.Point(0, 0);
             this.WraithCombat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.WraithCombat.Name = "WraithCombat";
-            this.WraithCombat.Size = new System.Drawing.Size(1355, 677);
+            this.WraithCombat.Size = new System.Drawing.Size(1904, 1041);
             this.WraithCombat.TabIndex = 161;
             this.WraithCombat.Visible = false;
             // 
@@ -413,7 +415,7 @@
             this.GainWillButt.TabIndex = 186;
             this.GainWillButt.Text = "Gain Willpower";
             this.GainWillButt.UseVisualStyleBackColor = true;
-            this.GainWillButt.Click += new System.EventHandler(this.GainWillButt_Click);
+            this.GainWillButt.Click += new System.EventHandler(this.GainWillButt_Click_1);
             // 
             // GainPathButt
             // 
@@ -424,7 +426,7 @@
             this.GainPathButt.TabIndex = 185;
             this.GainPathButt.Text = "Gain Pathos";
             this.GainPathButt.UseVisualStyleBackColor = true;
-            this.GainPathButt.Click += new System.EventHandler(this.GainPathButt_Click);
+            this.GainPathButt.Click += new System.EventHandler(this.GainPathButt_Click_1);
             // 
             // panel3
             // 
@@ -1087,6 +1089,7 @@
             this.WraPathosBox.Name = "WraPathosBox";
             this.WraPathosBox.Size = new System.Drawing.Size(132, 20);
             this.WraPathosBox.TabIndex = 153;
+            this.WraPathosBox.Text = "0";
             // 
             // WraMaxWill
             // 
@@ -1115,6 +1118,7 @@
             this.WraMWillBox.Name = "WraMWillBox";
             this.WraMWillBox.Size = new System.Drawing.Size(132, 20);
             this.WraMWillBox.TabIndex = 146;
+            this.WraMWillBox.Text = "0";
             // 
             // WraithCorpusBox
             // 
@@ -1123,6 +1127,7 @@
             this.WraithCorpusBox.Name = "WraithCorpusBox";
             this.WraithCorpusBox.Size = new System.Drawing.Size(132, 20);
             this.WraithCorpusBox.TabIndex = 145;
+            this.WraithCorpusBox.Text = "0";
             // 
             // WraSciL
             // 
@@ -1872,6 +1877,7 @@
             this.WraithRegretBox.Name = "WraithRegretBox";
             this.WraithRegretBox.Size = new System.Drawing.Size(132, 20);
             this.WraithRegretBox.TabIndex = 8;
+            this.WraithRegretBox.Text = "Regret";
             // 
             // WraithDeathBox
             // 
@@ -1880,6 +1886,7 @@
             this.WraithDeathBox.Name = "WraithDeathBox";
             this.WraithDeathBox.Size = new System.Drawing.Size(132, 20);
             this.WraithDeathBox.TabIndex = 7;
+            this.WraithDeathBox.Text = "Death";
             // 
             // WraithLifeBox
             // 
@@ -1888,6 +1895,7 @@
             this.WraithLifeBox.Name = "WraithLifeBox";
             this.WraithLifeBox.Size = new System.Drawing.Size(132, 20);
             this.WraithLifeBox.TabIndex = 6;
+            this.WraithLifeBox.Text = "Life";
             // 
             // WraithNameBox
             // 
@@ -1896,6 +1904,7 @@
             this.WraithNameBox.Name = "WraithNameBox";
             this.WraithNameBox.Size = new System.Drawing.Size(132, 20);
             this.WraithNameBox.TabIndex = 5;
+            this.WraithNameBox.Text = "Name";
             // 
             // WraithRegret
             // 
@@ -1948,20 +1957,29 @@
             this.label105.TabIndex = 0;
             this.label105.Text = "Wraith";
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // WraithForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1355, 677);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.Wraithstart);
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.NewButton);
             this.Controls.Add(this.WelcomePage);
             this.Name = "WraithForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Wraithstart.ResumeLayout(false);
             this.Wraithstart.PerformLayout();
             this.WraithCombat.ResumeLayout(false);
@@ -2136,6 +2154,8 @@
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Button GainWillButt;
         private System.Windows.Forms.Button GainPathButt;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

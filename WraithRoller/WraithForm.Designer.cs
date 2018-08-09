@@ -527,7 +527,7 @@
             this.WraDiffBox.Name = "WraDiffBox";
             this.WraDiffBox.Size = new System.Drawing.Size(80, 20);
             this.WraDiffBox.TabIndex = 170;
-            this.WraDiffBox.Text = "6";
+            this.WraDiffBox.Text = "10";
             // 
             // label19
             // 

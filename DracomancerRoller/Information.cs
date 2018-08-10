@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PureDragonRoller
+namespace DracomancerRoller
 {
     public class Information
     {
@@ -56,7 +56,7 @@ namespace PureDragonRoller
         public string HStatus { get; set; }
         public int HNeg { get; set; }
         public string Name { get; set; }
-        public String Gen { get; set; }
+        public int Gen { get; set; }
         public String Clan { get; set; }
         public String Sire { get; set; }
         public int Cons { get; set; }

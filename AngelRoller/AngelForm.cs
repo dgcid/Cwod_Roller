@@ -32,14 +32,17 @@ namespace AngelRoller
 
         private void LoadPlayerButt_Click(object sender, EventArgs e)
         {
-            if (File.Exists("...\\Demon.Xml"))
-            {
-                // Load Demon Boxes
+            DemonStart.Visible = true;
+            openFileDialog1.InitialDirectory = @"I:\Projects\Cwod_Roller\WraithRoller\bin\Debug\Save";
+            openFileDialog1.Filter = "Xml Files (*.xml)|*.xml";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
 
-                DemonStart.Visible = true;
-                XmlSerializer xs = new XmlSerializer(typeof(Information));
-                FileStream fs = new FileStream("...\\Demon.Xml", FileMode.Open, FileAccess.Read, FileShare.Read);
-                Information I = (Information)xs.Deserialize(fs);
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                Information I = new Information();
+                XmlLoad<Information> loadinfo = new XmlLoad<Information>();
 
                 DemStrBox.Text = Convert.ToString(I.DemStr);
                 DemDexBox.Text = Convert.ToString(I.DemDex);
@@ -65,7 +68,7 @@ namespace AngelRoller
                 DemonConsBox.Text = Convert.ToString(I.DemCons);
                 DemCourBox.Text = Convert.ToString(I.DemCour);
 
-                fs.Close();
+             
 
             }
         }
@@ -124,35 +127,42 @@ namespace AngelRoller
         //Demon Save Button
         private void button24_Click_2(object sender, EventArgs e)
         {
-            FileStream fs = new FileStream("...\\Demon.xml", FileMode.Create, FileAccess.Write);
-            Information i = new Information();
-            //Save Attributes
-            i.DemStr = int.Parse(DemStrBox.Text);
-            i.DemDex = int.Parse(DemDexBox.Text);
-            i.DemStam = int.Parse(DemStamBox.Text);
-            i.DemChar = int.Parse(DemCharBox.Text);
-            i.DemMan = int.Parse(DemManBox.Text);
-            i.DemApp = int.Parse(DemAppBox.Text);
-            i.DemIntel = int.Parse(DemIntBox.Text);
-            i.DemPerc = int.Parse(DemPercBox.Text);
-            i.DemWits = int.Parse(DemWitsBox.Text);
+            saveFileDialog1.InitialDirectory = @"I:\Projects\Cwod_Roller\WraithRoller\bin\Debug\Save";
+            saveFileDialog1.Filter = "Xml Files (*.xml)|*.xml";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
 
-            i.DemFaith = int.Parse(MaxFaithBox.Text);
-            i.DemCurFaith = int.Parse(CurFaithNum.Text);
-            i.DemWill = int.Parse(MaxDemWillBox.Text);
-            i.DemCurWill = int.Parse(DemCurWillNum.Text);
-            i.DemHp = int.Parse(DemCurHealthNum.Text);
-            i.DemHStatus = Convert.ToString(DemHealthStatus.Text);
-            i.DemHNeg = int.Parse(DemonCurHealthNeg.Text);
-            i.DemName = Convert.ToString(DemonNameBox.Text);
-            i.DemFaction = Convert.ToString(FactionTextBox.Text);
-            i.DemVis = Convert.ToString(VisageBox.Text);
-            i.DemHouse = Convert.ToString(HouseBox.Text);
-            ls.Add(i);
-            xs.Serialize(fs, ls);
-            DemNumbers.Text = Convert.ToString("Save successful");
-            fs.Close();
 
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Information i = new Information();
+
+                //Save Attributes
+                i.DemStr = int.Parse(DemStrBox.Text);
+                i.DemDex = int.Parse(DemDexBox.Text);
+                i.DemStam = int.Parse(DemStamBox.Text);
+                i.DemChar = int.Parse(DemCharBox.Text);
+                i.DemMan = int.Parse(DemManBox.Text);
+                i.DemApp = int.Parse(DemAppBox.Text);
+                i.DemIntel = int.Parse(DemIntBox.Text);
+                i.DemPerc = int.Parse(DemPercBox.Text);
+                i.DemWits = int.Parse(DemWitsBox.Text);
+
+                i.DemFaith = int.Parse(MaxFaithBox.Text);
+                i.DemCurFaith = int.Parse(CurFaithNum.Text);
+                i.DemWill = int.Parse(MaxDemWillBox.Text);
+                i.DemCurWill = int.Parse(DemCurWillNum.Text);
+                i.DemHp = int.Parse(DemCurHealthNum.Text);
+                i.DemHStatus = Convert.ToString(DemHealthStatus.Text);
+                i.DemHNeg = int.Parse(DemonCurHealthNeg.Text);
+                i.DemName = Convert.ToString(DemonNameBox.Text);
+                i.DemFaction = Convert.ToString(FactionTextBox.Text);
+                i.DemVis = Convert.ToString(VisageBox.Text);
+                i.DemHouse = Convert.ToString(HouseBox.Text);
+                XmlSave.SaveData(i, saveFileDialog1.FileName);
+                DemNumbers.Text = Convert.ToString("Save successful");
+               
+            }
 
         }
 

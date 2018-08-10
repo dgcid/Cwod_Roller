@@ -30,7 +30,86 @@ namespace PureDragonRoller
 
         private void RetPlayButt_Click(object sender, EventArgs e)
         {
+            {
+                Dragonstart.Visible = true;
+                openFileDialog1.InitialDirectory = @"I:\Projects\Cwod_Roller\WraithRoller\bin\Debug\Save";
+                openFileDialog1.Filter = "Xml Files (*.xml)|*.xml";
+                openFileDialog1.FilterIndex = 2;
+                openFileDialog1.RestoreDirectory = true;
 
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+
+                    Information I = new Information();
+                    XmlLoad<Information> loadinfo = new XmlLoad<Information>();
+
+                    I = loadinfo.LoadData(openFileDialog1.FileName);
+
+                    DraMaxAncBox.Text = Convert.ToString(I.DraManc);
+                    DraCurAncNum.Text = Convert.ToString(I.DraCanc);
+                    DraMastMaxBox.Text = Convert.ToString(I.DraMMas);
+                    DraCurMastNum.Text = Convert.ToString(I.DraCMas);
+                    DraMaxQuinBox.Text = Convert.ToString(I.DraMQuin);
+                    DraCurQuinNum.Text = Convert.ToString(I.DraCQuin);
+
+
+                    DraStrBox.Text = Convert.ToString(I.drastr);
+                    DraDexBox.Text = Convert.ToString(I.dradex);
+                    DraStamBox.Text = Convert.ToString(I.drastam);
+                    DraCharBox.Text = Convert.ToString(I.drachar);
+                    DraManiBox.Text = Convert.ToString(I.draman);
+                    DraAppBox.Text = Convert.ToString(I.draapp);
+                    DraIntBox.Text = Convert.ToString(I.draint);
+                    DraPercBox.Text = Convert.ToString(I.draper);
+                    DraWitsbox.Text = Convert.ToString(I.drawit);
+
+                    DraAlertBox.Text = Convert.ToString(I.draalr);
+                    DraDodBox.Text = Convert.ToString(I.dradod);
+                    DraAthBox.Text = Convert.ToString(I.draath);
+                    DraBraBox.Text = Convert.ToString(I.drabra);
+                    DraLeadBox.Text = Convert.ToString(I.dralead);                  
+                    DraEmpBox.Text = Convert.ToString(I.draemp);
+                    DraExpBox.Text = Convert.ToString(I.draexp);
+                    DraIntimBox.Text = Convert.ToString(I.draintim);
+                    DraStreetBox.Text = Convert.ToString(I.drastreet);
+                    DraSubbox.Text = Convert.ToString(I.drasubt);
+                    DraIntuitBox.Text = Convert.ToString(I.drainuit);
+
+
+                    DraAKBox.Text = Convert.ToString(I.draak);
+                    DraCraBox.Text = Convert.ToString(I.dracra);
+                    DraDrvBox.Text = Convert.ToString(I.dradrv);
+                    DraEtiBox.Text = Convert.ToString(I.draeti);
+                    DraFABox.Text = Convert.ToString(I.drafa);                  
+                    DraMeditBox.Text = Convert.ToString(I.dramedit);
+                    DraMelBox.Text = Convert.ToString(I.dramel);
+                    DraPerfBox.Text = Convert.ToString(I.draperf);
+                    DraSurvBox.Text = Convert.ToString(I.drasurv);
+                    DraStealbox.Text = Convert.ToString(I.drasteal);
+                    DraFlightBox.Text = Convert.ToString(I.drafly);
+
+                    DraAcadBox.Text = Convert.ToString(I.draaca);
+                    DraCompBox.Text = Convert.ToString(I.dracom);
+                    Drafinbox.Text = Convert.ToString(I.drafin);
+                    DraInvestBox.Text = Convert.ToString(I.drainv);
+                    DraLawbox.Text = Convert.ToString(I.drainv);
+                    DraLingbox.Text = Convert.ToString(I.draling);
+                    DraMedBox.Text = Convert.ToString(I.dramed);
+                    DraOccBox.Text = Convert.ToString(I.draocc);
+                    DraPolibox.Text = Convert.ToString(I.drapol);
+                    DraTechBox.Text = Convert.ToString(I.dratech);
+                    DraEngBox.Text = Convert.ToString(I.draeng);
+
+                    DraArmBox.Text = Convert.ToString(I.drarm);
+                    CurHealth.Text = Convert.ToString(I.Hp);
+                    CurHealthNegative.Text = Convert.ToString(I.HNeg);
+                    CurHealthStatus.Text = Convert.ToString(I.HStatus);
+                
+                }
+
+
+
+            }
         }
 
         private void DraStartOver_Click(object sender, EventArgs e)
@@ -6035,66 +6114,82 @@ namespace PureDragonRoller
         //Save Butt
         private void DraSaveButt_Click(object sender, EventArgs e)
         {
-            {
-                FileStream fs = new FileStream("...\\Vampire.xml", FileMode.Create, FileAccess.Write);
-                Information i = new Information();
-                //Save Attributes
-                i.Str_Box = int.Parse(DraStrBox.Text);
-                i.Dex_Box = int.Parse(DraDexBox.Text);
-                i.Stam_Box = int.Parse(DraStamBox.Text);
-                i.Char_Box = int.Parse(DraCharBox.Text);
-                i.Man_Box = int.Parse(DraManiBox.Text);
-                i.Appear_Box = int.Parse(DraAppBox.Text);
-                i.intel_Box = int.Parse(DraIntBox.Text);
-                i.Per_Box = int.Parse(DraPercBox.Text);
-                i.Wits_Box = int.Parse(DraWitsbox.Text);
+            saveFileDialog1.InitialDirectory = @"I:\Projects\Cwod_Roller\WraithRoller\bin\Debug\Save";
+            saveFileDialog1.Filter = "Xml Files (*.xml)|*.xml";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
 
-                i.Alert_Box = int.Parse(DraAlertBox.Text);
-                i.Ath_Box = int.Parse(DraAthBox.Text);
-                i.Brawl_Box = int.Parse(DraBraBox.Text);
-                i.Dodge_Box = int.Parse(DraDodBox.Text);
-                i.Emp_Box = int.Parse(DraEmpBox.Text);
-                i.Express_Box = int.Parse(DraExpBox.Text);
-                i.intim_Box = int.Parse(DraIntimBox.Text);
-                i.Lead_Box = int.Parse(DraLeadBox.Text);
-                i.Street_Box = int.Parse(DraStreetBox.Text);
-                i.Subt_Box = int.Parse(DraSubbox.Text);
-                i.AK_Box = int.Parse(DraAKBox.Text);
-                i.Crafts_box = int.Parse(DraCraBox.Text);
-                i.Drive_Box = int.Parse(DraDrvBox.Text);
-                i.Fire_Box = int.Parse(DraFABox.Text);
-                i.Mel_Box = int.Parse(DraMelBox.Text);
-                i.Perf_Box = int.Parse(DraPerfBox.Text);
-                i.Sec_box = int.Parse(DraFlightBox.Text);
-                i.Stealth_Box = int.Parse(DraStealbox.Text);
-                i.Surv_Box = int.Parse(DraSurvBox.Text);
-                i.Ac_Box = int.Parse(DraAcadBox.Text);
-                i.Com_Box = int.Parse(DraCompBox.Text);
-                i.Fin_Box = int.Parse(Drafinbox.Text);
-                i.Invest_Box = int.Parse(DraInvestBox.Text);
-                i.Law_Box = int.Parse(DraLawbox.Text);
-                i.Ling_Box = int.Parse(DraLingbox.Text);
-                i.Med_Box = int.Parse(DraMedBox.Text);
-                i.Occ_Box = int.Parse(DraOccBox.Text);
-                i.Poli_Box = int.Parse(DraPolibox.Text);
-                i.Sci_Box = int.Parse(DraTechBox.Text);
-                i.Blood = int.Parse(DraCurQuinNum.Text);
-                i.Will = int.Parse(DraCurAncNum.Text);
-                i.Human = int.Parse(DraCurMastNum.Text);
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Information i = new Information();
+                i.draname = Convert.ToString(DragonNameBox.Text);
+                i.drarank = Convert.ToString(DragonRankBox.Text);
+                i.draspec = Convert.ToString(DragonSpeciesBox.Text);
+                i.drasspec = Convert.ToString(DragonSubSpeciesBox.Text);
+
+                i.DraManc = int.Parse(DraMaxAncBox.Text);
+                i.DraCanc = int.Parse(DraCurAncNum.Text);
+                i.DraMMas = int.Parse(DraMastMaxBox.Text);
+                i.DraCMas = int.Parse(DraCurMastNum.Text);
+                i.DraMQuin = int.Parse(DraMaxQuinBox.Text);
+                i.DraCQuin = int.Parse(DraCurQuinNum.Text);
+
+
+
+                i.drastr = int.Parse(DraStrBox.Text);
+                i.dradex = int.Parse(DraDexBox.Text);
+                i.drastam = int.Parse(DraStamBox.Text);
+                i.drachar = int.Parse(DraCharBox.Text);
+                i.draman = int.Parse(DraManiBox.Text);
+                i.draapp = int.Parse(DraAppBox.Text);
+                i.draint = int.Parse(DraIntBox.Text);
+                i.draper = int.Parse(DraPercBox.Text);
+                i.drawit = int.Parse(DraWitsbox.Text);
+
+                i.draalr = int.Parse(DraAlertBox.Text);
+                i.dradod = int.Parse(DraDodBox.Text);
+                i.draath = int.Parse(DraAthBox.Text);
+                i.drabra = int.Parse(DraBraBox.Text);
+                i.dralead = int.Parse(DraLeadBox.Text);
+                i.draemp = int.Parse(DraEmpBox.Text);
+                i.draexp = int.Parse(DraExpBox.Text);
+                i.draintim = int.Parse(DraIntimBox.Text);
+                i.drastreet = int.Parse(DraStreetBox.Text);
+                i.drainuit = int.Parse(DraIntuitBox.Text);
+                i.drasubt = int.Parse(DraSubbox.Text);
+
+                i.draak = int.Parse(DraAKBox.Text);
+                i.dracra = int.Parse(DraCraBox.Text);
+                i.draeti = int.Parse(DraEtiBox.Text);
+                i.dradrv = int.Parse(DraDrvBox.Text);
+                i.drafa = int.Parse(DraFABox.Text);
+                i.dramedit = int.Parse(DraMeditBox.Text);
+                i.dramel = int.Parse(DraMelBox.Text);
+                i.draperf = int.Parse(DraPerfBox.Text);
+                i.drasteal = int.Parse(DraStealbox.Text);
+                i.drasurv = int.Parse(DraSurvBox.Text);
+                i.drafly = int.Parse(DraFlightBox.Text);
+
+                i.draaca = int.Parse(DraAcadBox.Text);
+                i.dracom = int.Parse(DraCompBox.Text);
+                i.drafin = int.Parse(Drafinbox.Text);
+                i.drainv = int.Parse(DraInvestBox.Text);
+                i.dralaw = int.Parse(DraLawbox.Text);
+                i.draling = int.Parse(DraLingbox.Text);
+                i.dramed = int.Parse(DraMedBox.Text);
+                i.draocc = int.Parse(DraOccBox.Text);
+                i.drapol = int.Parse(DraPolibox.Text);
+                i.dratech = int.Parse(DraTechBox.Text);
+                i.draeng = int.Parse(DraEngBox.Text);
+
+                i.drarm = int.Parse(DraArmBox.Text);
                 i.Hp = int.Parse(CurHealth.Text);
                 i.HStatus = Convert.ToString(CurHealthStatus.Text);
                 i.HNeg = int.Parse(CurHealthNegative.Text);
-                i.Name = Convert.ToString(DragonNameBox.Text);
-                i.Clan = Convert.ToString(DragonRankBox.Text);
-                i.Sire = Convert.ToString(DragonSpeciesBox.Text);
-                i.Gen  = Convert.ToString(DragonSubSpeciesBox.Text);
-                i.Cons = int.Parse(DraMastMaxBox.Text);
-                i.Conv = int.Parse(DraMaxQuinBox.Text);
-                i.MaxWill = int.Parse(DraMaxAncBox.Text);
-                ls.Add(i);
-                xs.Serialize(fs, ls);
+                XmlSave.SaveData(i, saveFileDialog1.FileName);
                 DragonNumbers.Text = Convert.ToString("Save Successful");
-                fs.Close();
+
 
             }
         }
@@ -6314,7 +6409,7 @@ namespace PureDragonRoller
         }
            
 
-            private void HealAllButt_Click(object sender, EventArgs e)
+        private void HealAllButt_Click(object sender, EventArgs e)
         {
             CurHealth.Text = Convert.ToString(0);
             CurHealthStatus.Text = Convert.ToString("Fine");

@@ -228,7 +228,7 @@
             // 
             // Wraithstart
             // 
-            this.Wraithstart.AutoSize = true;
+            this.Wraithstart.AutoScroll = true;
             this.Wraithstart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Wraithstart.Controls.Add(this.WraithCombat);
             this.Wraithstart.Controls.Add(this.WraithCombatbutt);
@@ -330,13 +330,13 @@
             this.Wraithstart.Location = new System.Drawing.Point(0, 0);
             this.Wraithstart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Wraithstart.Name = "Wraithstart";
-            this.Wraithstart.Size = new System.Drawing.Size(1904, 1041);
+            this.Wraithstart.Size = new System.Drawing.Size(1358, 1041);
             this.Wraithstart.TabIndex = 16;
             this.Wraithstart.Visible = false;
             // 
             // WraithCombat
             // 
-            this.WraithCombat.AutoSize = true;
+            this.WraithCombat.AutoScroll = true;
             this.WraithCombat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.WraithCombat.Controls.Add(this.GainWillButt);
             this.WraithCombat.Controls.Add(this.GainPathButt);
@@ -402,7 +402,7 @@
             this.WraithCombat.Location = new System.Drawing.Point(0, 0);
             this.WraithCombat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.WraithCombat.Name = "WraithCombat";
-            this.WraithCombat.Size = new System.Drawing.Size(1904, 1041);
+            this.WraithCombat.Size = new System.Drawing.Size(1358, 1041);
             this.WraithCombat.TabIndex = 161;
             this.WraithCombat.Visible = false;
             // 
@@ -1971,7 +1971,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1358, 1041);
             this.Controls.Add(this.Wraithstart);
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.NewButton);

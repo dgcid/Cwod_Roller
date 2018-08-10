@@ -232,6 +232,8 @@
             this.DraFlightBox = new System.Windows.Forms.TextBox();
             this.DraIntuitBox = new System.Windows.Forms.TextBox();
             this.IntuitionLab = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             FInanceLab = new System.Windows.Forms.Label();
             this.Dragonstart.SuspendLayout();
             this.DragonCombat.SuspendLayout();
@@ -280,7 +282,6 @@
             // 
             // Dragonstart
             // 
-            this.Dragonstart.AutoSize = true;
             this.Dragonstart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Dragonstart.Controls.Add(this.DragonCombat);
             this.Dragonstart.Controls.Add(this.DragonCombatbutt);
@@ -394,7 +395,6 @@
             // 
             // DragonCombat
             // 
-            this.DragonCombat.AutoSize = true;
             this.DragonCombat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.DragonCombat.Controls.Add(this.CurHealthNegative);
             this.DragonCombat.Controls.Add(this.VHealthModifier);
@@ -1597,6 +1597,7 @@
             this.DraMaxQuinBox.Name = "DraMaxQuinBox";
             this.DraMaxQuinBox.Size = new System.Drawing.Size(132, 20);
             this.DraMaxQuinBox.TabIndex = 153;
+            this.DraMaxQuinBox.Text = "0";
             // 
             // MaxMastery
             // 
@@ -1625,6 +1626,7 @@
             this.DraMastMaxBox.Name = "DraMastMaxBox";
             this.DraMastMaxBox.Size = new System.Drawing.Size(132, 20);
             this.DraMastMaxBox.TabIndex = 146;
+            this.DraMastMaxBox.Text = "0";
             // 
             // DraMaxAncBox
             // 
@@ -1633,6 +1635,7 @@
             this.DraMaxAncBox.Name = "DraMaxAncBox";
             this.DraMaxAncBox.Size = new System.Drawing.Size(132, 20);
             this.DraMaxAncBox.TabIndex = 145;
+            this.DraMaxAncBox.Text = "0";
             // 
             // TechLab
             // 
@@ -2382,6 +2385,7 @@
             this.DragonSubSpeciesBox.Name = "DragonSubSpeciesBox";
             this.DragonSubSpeciesBox.Size = new System.Drawing.Size(132, 20);
             this.DragonSubSpeciesBox.TabIndex = 8;
+            this.DragonSubSpeciesBox.Text = "SubS";
             // 
             // DragonSpeciesBox
             // 
@@ -2390,6 +2394,7 @@
             this.DragonSpeciesBox.Name = "DragonSpeciesBox";
             this.DragonSpeciesBox.Size = new System.Drawing.Size(132, 20);
             this.DragonSpeciesBox.TabIndex = 7;
+            this.DragonSpeciesBox.Text = "Species";
             // 
             // DragonRankBox
             // 
@@ -2398,6 +2403,7 @@
             this.DragonRankBox.Name = "DragonRankBox";
             this.DragonRankBox.Size = new System.Drawing.Size(132, 20);
             this.DragonRankBox.TabIndex = 6;
+            this.DragonRankBox.Text = "Rsnk";
             // 
             // DragonNameBox
             // 
@@ -2406,6 +2412,7 @@
             this.DragonNameBox.Name = "DragonNameBox";
             this.DragonNameBox.Size = new System.Drawing.Size(132, 20);
             this.DragonNameBox.TabIndex = 5;
+            this.DragonNameBox.Text = "Nsme";
             // 
             // DragonSubSpecies
             // 
@@ -2504,6 +2511,10 @@
             this.IntuitionLab.Size = new System.Drawing.Size(44, 13);
             this.IntuitionLab.TabIndex = 163;
             this.IntuitionLab.Text = "Intuition";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // DragonForm
             // 
@@ -2732,6 +2743,8 @@
         private System.Windows.Forms.Label VampHpStatusLabl;
         private System.Windows.Forms.Label CurHealthNegative;
         private System.Windows.Forms.Label VHealthModifier;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

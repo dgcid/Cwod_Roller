@@ -140,6 +140,8 @@
             this.HouseLabel = new System.Windows.Forms.Label();
             this.DemonNameLabel = new System.Windows.Forms.Label();
             this.label166 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.DemonStart.SuspendLayout();
             this.DemonSocial.SuspendLayout();
             this.SuspendLayout();
@@ -1351,6 +1353,10 @@
             this.label166.TabIndex = 0;
             this.label166.Text = "Angel";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // AngelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1485,6 +1491,8 @@
         private System.Windows.Forms.Button SpendFaithButt;
         private System.Windows.Forms.Label FaithForRolls;
         private System.Windows.Forms.TextBox FaithRollBox;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
